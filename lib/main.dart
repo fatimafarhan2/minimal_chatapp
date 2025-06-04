@@ -14,7 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // ✅ Initialize local notifications
+
   const AndroidInitializationSettings androidInitSettings =
       AndroidInitializationSettings('@mipmap/ic_launcher');
 
@@ -29,7 +29,7 @@ void main() async {
     },
   );
 
-  // ✅ Request notification permission (Android 13+)
+
   if (Platform.isAndroid) {
     if (await Permission.notification.isDenied ||
         await Permission.notification.isPermanentlyDenied) {
