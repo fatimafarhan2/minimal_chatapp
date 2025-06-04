@@ -1,0 +1,31 @@
+name: minimal_chatapp
+description: "A new Flutter project."
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^2.10.0      # Compatibility with firebase_auth 4.1.0
+  firebase_auth: ^4.1.0       # A version without the MultiFactorInfo issue
+  cloud_firestore: ^4.12.0    # Compatible version with firebase_auth 4.1.0
+  rename: ^3.0.2
+  shared_preferences: ^2.0.6
+  flutter_local_notifications: ^17.1.2
+  permission_handler: ^11.0.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+dependency_overrides:
+  firebase_auth_platform_interface: 7.2.0  # Specifies compatibility without MultiFactorInfo issues
